@@ -1,21 +1,3 @@
-/* const plantList = [
-    'monstera',
-    'ficus lyrata',
-    'pothos argenté',
-    'yucca',
-    'palmier'
-]
-
-function ShoppingList() {
-    return (
-        <ul>
-            {plantList.map((plant, index) => (
-                <li key={`${plant}-${index}`}>{ plant }</li>
-            ))}
-        </ul>
-    )
-}
- */
 import { plantList } from '../datas/plantList'
 
 function ShoppingList() {
@@ -32,9 +14,11 @@ function ShoppingList() {
 					<li key={cat}>{cat}</li>
 				))}
 			</ul>
-			<ul>
+			<ul className='lmj-plant-list'>
 				{plantList.map((plant) => (
-					<li key={plant.id}>{plant.name}{plant.isBestSale ? <span>🔥</span> : null}</li>
+					<li key={plant.id} className='lmj-plant-item'>
+						{plant.name}
+					</li>
 				))}
 			</ul>
 		</div>
